@@ -5,8 +5,6 @@ using namespace 'System.Windows.Controls'
 
 Add-Type -AssemblyName PresentationFramework
 
-. .\todo\PoShGui\New-Control.ps1
-
 function New-Window {
     [CmdletBinding()]
     param (
@@ -99,25 +97,3 @@ $Id = 1
         return $Result
     }
 }
-
-
-$Content = @'
-ControlType; Name; Value
-Headline;Test Headline 1;
-TextBox;Textbox Label 11;Textbox Default Text 1
-TextBox;Textbox Label 12
-CheckBox;Checkbox Label 31
-Headline;Test Headline 2;
-TextBox;Textbox Label 21;Textbox Default Text 3
-TextBox;Textbox Label 22;Textbox Default Text 4
-CheckBox;Checkbox Label 31;True
-'@ | ConvertFrom-Csv -Delimiter ';' | New-Control 
-
-New-Window -Title 'Test Window' -Height 400 -Width 600 -Content $Content | select -exp Content
-
-
-New-ModuleManifest -Path .\.Modules\PSWindowUI\PSWindowUI.psd1 -RootModule 'PSWindowUI.psm1' -Author 'Attila Krick' -Description 'A module for creating windowed UI with PowerShell.' -ModuleVersion '1.0.0' -Copyright '2025 Attila Krick' -PowerShellVersion '7.4' -FunctionsToExport 'New-Window', 'New-Control' -CompanyName 'ATTILAKRICK.COM' -Tags Attila, WPF, Window, GUI, Control
-
-
-
-

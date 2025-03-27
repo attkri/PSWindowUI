@@ -14,6 +14,7 @@
     Copyright            = '2025 Attila Krick'
     Description          = 'A PowerShell module with cmdlets for creating user interfaces using WPF for data querying.'
     
+    PowerShellVersion    = '7.4'
     CompatiblePSEditions = 'Desktop', 'Core'
     RequiredAssemblies   = 'PresentationFramework', 'PresentationCore', 'WindowsBase', 'System.Xaml'
 
@@ -62,7 +63,7 @@
 
         PSData = @{
             ProjectUri               = 'https://github.com/attkri/PSWindowUI'
-            Tags                     = 'Attila', 'WPF', 'Window', 'GUI', 'Control', 'User Interface', 'UI', 'XAML', 'PresentationFramework'
+            Tags                     = 'Attila', 'WPF', 'Window', 'GUI', 'Control', 'UserInterface', 'UI', 'XAML', 'PresentationFramework'
             LicenseUri               = 'https://raw.githubusercontent.com/attkri/PSWindowUI/refs/heads/main/LICENSE'
             RequireLicenseAcceptance = $false
             # IconUri = '' # A URL to an icon representing this module.
